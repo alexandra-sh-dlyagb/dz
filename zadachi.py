@@ -31,3 +31,16 @@ value_max = max(array_result)
 value_min = min(array_result)
 value_result = value_max - value_min
 print (value_result)
+
+#Написать программу преобразования десятичного числа в двоичное
+value = int(input('Введите десятичное число => '))
+newarray = []
+while value != 0:
+    newarray.append(value%2)
+    value = value//2
+lengthh = len(newarray)
+for i in range (lengthh//2):
+    temp = newarray[i]
+    newarray[i] = newarray[lengthh - i - 1]
+    newarray[lengthh - i - 1] = temp
+print (newarray)
